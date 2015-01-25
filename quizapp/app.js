@@ -1,6 +1,8 @@
 var app = angular.module('quizApp', []);
 
 app.directive('quiz', function(quizQuestions) {
+	// $(this).css({"background-color": "red"});
+
 	return {
 		restrict: 'AE',
 		scope: {},
@@ -24,28 +26,47 @@ app.directive('quiz', function(quizQuestions) {
 					scope.question = q.question;
 					scope.options = q.options;
 					scope.answer = q.answer;
-					scope.answerMode = true;
+					// scope.answerMode = true;
 				} else {
 					scope.quizOver = true;
 				}
 			};
 
-			scope.checkAnswer = function() {
+			// scope.checkAnswer = function() {
+			// 	if(!$('input[name=answer]:checked').length) return;
+
+			// 	var ans = $('input[name=answer]:checked').val();
+
+			// 	if(ans == scope.options[scope.answer]) {
+			// 		scope.score++;
+			// 		scope.correctAns = true;
+			// 	} else {
+			// 		scope.correctAns = false;
+			// 	}
+
+			// 	scope.answerMode = false;
+			// };
+
+			scope.nextQuestion = function() {
 				if(!$('input[name=answer]:checked').length) return;
 
 				var ans = $('input[name=answer]:checked').val();
 
-				if(ans == scope.options[scope.answer]) {
+				console.log(ans);
+				// if(ans == scope.options[0]) {
+				// 	scope.score++;
+				// }
+
+				if (ans < scope.options[1]) {//} && (ans < 4)) {
+					console.log("small");
+					scope.score--;
+				} else if (ans > scope.options[1]){ //} && (ans > -1)) {
+					console.log("big")
 					scope.score++;
-					scope.correctAns = true;
-				} else {
-					scope.correctAns = false;
+				} else { //} && (ans > -1)) {
+					console.log("equal")
 				}
 
-				scope.answerMode = false;
-			};
-
-			scope.nextQuestion = function() {
 				scope.id++;
 				scope.getQuestion();
 			}
@@ -59,28 +80,28 @@ app.factory('quizQuestions', function() {
 	var questions = [
 		{
 			question: "Which of these choices best describe you.",
-			options: ["I can always find the good, even in the most unlikeable people.", "I'm optimistic most of the time.", "I keep my problems to myself.", "Sheesh, I hate people."],
-			answer: 2
+			options: ["I can always find the good, even in the most unlikeable people.", "I keep my problems to myself.", "Sheesh, I hate people."],
+			// answer: 0
 		},
 		{
 			question: "sfasfsadgsafasfda",
-			options: ["Hey There!", "Hi", "Hi...", "Go away!"],
-			answer: 0
+			options: ["Hey There!", "Hi", "Go away!"],
+			// answer: 0
 		},
 		{
 			question: "You just talked with your friend and the conversation got a little heated. The situation is tense right now. What do you do?",
-			options: ["Try to put youself in your friend's shoes. Figure out what's bothering them.", "Try to calm them down.", "Tell your friend to snap out of it.", "Tell them to quit being a jerk!"],
-			answer: 3
+			options: ["Try to put youself in your friend's shoes. Figure out what's bothering them.", "Tell your friend to snap out of it.", "Tell them to quit being a jerk!"],
+			// answer: 3
 		},
 		{
 			question: "You just complete a test",
-			options: ["Atlanta", "Sydney", "Athens", "Beijing"],
-			answer: 0
+			options: ["Atlanta", "Sydney", "Athens"],
+			// answer: 0
 		},
 		{
 			question: "Who invented telephone?",
-			options: ["Albert Einstein", "Alexander Graham Bell", "Isaac Newton", "Marie Curie"],
-			answer: 1
+			options: ["Albert Einstein", "Alexander Graham Bell", "Marie Curie"],
+			// answer: 1
 		}
 	];
 

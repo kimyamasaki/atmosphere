@@ -9,13 +9,14 @@
 				</label>
 			</li>
 		</ul>
-		<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+		<button ng-click="nextQuestion()" class="next-question">Next</button>
+		<!-- <button ng-click="checkAnswer()" ng-show="answerMode">Submit</button> -->
 
-		<div ng-show="!answerMode">
+		<!-- <div ng-show="!answerMode">
 			<button ng-click="nextQuestion()" class="next-question">Next</button>
 			<span ng-show="correctAns">That is correct!</span>
 			<span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
-		</div>
+		</div> -->
 	</div>
 
 	<div ng-show="quizOver">
