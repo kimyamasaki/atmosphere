@@ -73,7 +73,7 @@ app.directive('quiz', function(quizQuestions) {
 					ans--;
 				} else if (ans > scope.options[1]){
 					ans++;
-				} 
+				}
 
 				var diff = ans - oldAns;
 				console.log(diff);
@@ -91,24 +91,24 @@ app.directive('quiz', function(quizQuestions) {
 app.factory('quizQuestions', function() {
 	var questions = [
 		{
-			question: "Which of these choices best describe you.",
-			options: ["I can always find the good, even in the most unlikeable people.", "I keep my problems to myself.", "Sheesh, I hate people."],
+			question: "What is your opinion on people.",
+			options: ["I can always find the good, even in the most unlikeable people!", "I keep my problems to myself.", "Sheesh, I hate people."],
 		},
 		{
-			question: "sfasfsadgsafasfda",
-			options: ["Hey There!", "Hi", "Go away!"],
+			question: "You just finished a long day on at work and have arrived home. How do you feel?",
+			options: ["That was pretty productive!", "I need to get some sleep.", "Every day is the same damn thing."],
 		},
 		{
 			question: "You just talked with your friend and the conversation got a little heated. The situation is tense right now. What do you do?",
 			options: ["Try to put youself in your friend's shoes. Figure out what's bothering them.", "Tell your friend to snap out of it.", "Tell them to quit being a jerk!"],
 		},
 		{
-			question: "You just complete a test",
-			options: ["Atlanta", "Sydney", "Athens"],
+			question: "You just complete a test and you didn't do too hot on it. How are you feeling?",
+			options: ["I'll definitely get it next time!", "Eh, I guess I'll have to study more.", "That test was pretty stupid..."],
 		},
 		{
-			question: "Who invented telephone?",
-			options: ["Albert Einstein", "Alexander Graham Bell", "Marie Curie"],
+			question: "What do you most want to do right now?",
+			options: ["I want to go on adventure!", "A nap sounds pretty solid at the moment.", "I want to be alone. I don't want to deal with anyone."],
 		}
 	];
 
