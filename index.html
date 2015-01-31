@@ -1,0 +1,62 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app='quizApp'>
+  <head>
+    <!-- SCROLLS -->
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- SPELLS -->
+    <!-- load angular and angular route via CDN -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/hammer.js/hammer.js"></script> <!-- has to go before script.js -->
+    <script src="script.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/quizController.js"></script>
+
+    <style>
+    #hammer-pad {
+      height: 500px;
+      background-color: black;
+    }
+    </style>
+
+  </head>
+  <body ng-controller="mainController" class="light">
+
+    <!-- HEADER AND NAVBAR -->
+    <!-- <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Angular Routing Example</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#/q1"><i class="fa fa-home"></i> Begin</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header> -->
+
+    <!-- <div id="hammer-pad"></div> -->
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view>
+      </div>
+      <!-- <quiz/> -->
+
+   
+        <!-- {{ formData }} -->
+    
+
+  </body>
+</html>
