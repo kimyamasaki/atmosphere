@@ -1,11 +1,39 @@
+body {
+	color: black;
+}
+
 .light {
 	background-color: #38C0E5;
+	transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
 }
 
 .medium {
 	background-color: #2197C1;
+	transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
 }
 
 .dark {
 	background-color: #29527F;
+	transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+}
+
+li {
+	list-style:none;
+	line-height: 25px;
+	padding: 5px;
+	color: #000;
+	background: #fff;
+}
+
+a {
+	background: #fff;
 }

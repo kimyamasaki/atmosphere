@@ -1,41 +1,11 @@
-<!-- <h1>{{question}}</h1>
 
-<form>
-	<label ng-repeat="item in list">
-		<input type="radio" name="answer" value="{{$index + 1}}" ng-model="formData.answer">{{item.answer}}
-	</label>
-</form>
-
-<button ng-click="nextQuestion()" class="next-question">Next</button>
-
- -->
-<div class="jumbotron text-center">
-	<h2>{{question.question}}</h2>
-	<ul id="options">
-		<li ng-repeat="option in questions">
-			<label>
-				<input type="radio" name="answer" value="{{$index + 1}}">
-				{{question.options}}
-			</label>
-		</li>
-	</ul>
-	<button ng-click="nextQuestion()" class="next-question">Next</button>
-
-
-
-	<!-- <h2 id="question">{{question}}</h2>
-	<ul id="options">
-		<li ng-repeat="option in options">
-			<label>
-				<input type="radio" name="answer" value="{{$index + 1}}">
-				{{option}}
-			</label>
-		</li>
-	</ul>
-	<button ng-click="nextQuestion()" class="next-question">Next</button> -->
-
-	<!-- <p>{{ question.question }}</p>
-	<p>{{ question.answer }}</p> 
-	
-	<a href="#">Next</a>-->
-</div>
+<h2>{{question.question}}</h2>
+<ul id="options">
+	<li ng-repeat="option in question.options">
+		<label>
+			<input type="radio" name="answer" value="{{$index + 1}}" ng-model="formAnswer">
+			{{option}}
+		</label>
+	</li>
+</ul>
+<a href="{{question.nextUrl}}" ng-click="nextQuestion()">Next</a>
