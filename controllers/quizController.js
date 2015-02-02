@@ -2,35 +2,32 @@
 var currentSum = 0;
 var currentQuestion = 0;
 
-
-
 app.controller('quizController', function($scope, $route) {
   var questions = {
     q1: {
-      question: "Q1: What is your opinion on people.",
+      question: "What is your opinion on people.",
 		  options: ["I can always find the good, even in the most unlikeable people!", "I keep my problems to myself.", "Sheesh, I hate people."],
       nextUrl: '#quiz/q2',
     },
     q2: {
-      question: "Q2: You just finished a long day on at work and have arrived home. How do you feel?",
+      question: "You just finished a long day on at work and have arrived home. How do you feel?",
 		  options: ["That was pretty productive!", "I need to get some sleep.", "Every day is the same damn thing."],
       nextUrl: '#quiz/q3',
     },
     q3: {
-      question: "Q3: You just talked with your friend and the conversation got a little heated. The situation is tense right now. What do you do?",
+      question: "You just talked with your friend and the conversation got a little heated. The situation is tense right now. What do you do?",
 		  options: ["Try to put youself in your friend's shoes. Figure out what's bothering them.", "Tell your friend to snap out of it.", "Tell them to quit being a jerk!"],
       nextUrl: '#quiz/q4',
     },
     q4: {
-    	question: "Q4: You just complete a test and you didn't do too hot on it. How are you feeling?",
+    	question: "You just complete a test and you didn't do too hot on it. How are you feeling?",
 		  options: ["I'll definitely get it next time!", "Eh, I guess I'll have to study more.", "That test was pretty stupid..."],
       nextUrl: '#quiz/q5',
     },
     q5: {
-    	question: "Q5: What do you most want to do right now?",
+    	question: "What do you most want to do right now?",
 		  options: ["I want to go on adventure!", "A nap sounds pretty solid at the moment.", "I want to be alone. I don't want to deal with anyone."],
       nextUrl: '#quiz/results',
-
     }
   };
 
@@ -43,8 +40,6 @@ app.controller('quizController', function($scope, $route) {
     if (currentQuestion == 5){
       $scope.quizOver = true;
       console.log("Quiz over is: " + $scope.quizOver);
-      
-
     }
   }
 
@@ -62,7 +57,6 @@ app.controller('quizController', function($scope, $route) {
 
           currentSum = currentSum + parseInt(ans);
           console.log("current sum is: "+ currentSum);
-
       }
     }
 
@@ -78,7 +72,7 @@ app.controller('quizController', function($scope, $route) {
       console.log("Total sum: "+ copyCurrentSum + " out of 3");
       copyCurrentSum = copyCurrentSum/3
       console.log("divided by 3 is "+ copyCurrentSum);
-
+      document.body.classList.add('light');
     };
 
     if(currentQuestion == 2){
@@ -117,22 +111,38 @@ app.controller('quizController', function($scope, $route) {
   };
 
   // Background transitions
+  var weather = document.getElementById("weather");
+  var sunny = document.getElementById('sun');
+  var cloudy = document.getElementById('cloud');
+  var rainy = document.getElementById('rain');
+
   $scope.changeClass = function(copyCurrentSum) {
-    console.log("I am being called");
 
     if (copyCurrentSum <= .47) {
       document.body.classList.add('light');
-      console.log("Happy");
+      // cloudy.style.visibility = "hidden";
+      // rainy.style.visibility = "hidden";
+      document.body.classList.add('sun');
 
+      document.body.classList.remove('rain')
+      document.body.classList.remove('cloud')
+      console.log("Happy");
 
     } else if (copyCurrentSum >= .80) {
       document.body.classList.add('dark');
+      document.body.classList.add('rain');
+
+      document.body.classList.remove('sun')
+      document.body.classList.remove('cloud')
       console.log("Sad");
 
     } else {
       document.body.classList.add('medium');
-      console.log("Neutral");
+      document.body.classList.add('cloud');
 
+      document.body.classList.remove('rain')
+      document.body.classList.remove('sun')
+      console.log("Neutral");
     }
   };
 });
