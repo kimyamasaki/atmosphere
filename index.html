@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app='quizApp'>
+  <head>
+    <!-- SCROLLS -->
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- SPELLS -->
+    <!-- load angular and angular route via CDN -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/hammer.js/hammer.js"></script> <!-- has to go before script.js -->
+    <script src="script.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/quizController.js"></script>
+
+    <!-- /*<style>
+    #hammer-pad {
+      height: 500px;
+      background-color: black;
+    }
+    </style>*/ -->
+
+  </head>
+  <body ng-controller="mainController" class="light sun"> <!-- class="light">-->
+
+    <!-- <div id="hammer-pad"></div> -->
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view>
+      </div>
+
+  </body>
+</html>
