@@ -2,11 +2,7 @@
   "name": "whatever",
   "dependencies": {
     "angular-route": "~1.3.11",
-<<<<<<< HEAD
     "hammer.js": "~2.0.4",
     "bootstrap": "~3.3.2"
-=======
-    "hammer.js": "~2.0.4"
->>>>>>> 6b4f70df2ef5088225a74889a1033f0e1e7fc09d
   }
 }

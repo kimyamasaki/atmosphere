@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div>
 	<div ng-show="!quizOver">
 		<!-- <div class="sun"></div> -->
@@ -32,16 +31,3 @@
 	</div>
 	<!-- End of quizArea -->
 </div>
-=======
-
-<h2>{{question.question}}</h2>
-<ul id="options">
-	<li ng-repeat="option in question.options">
-		<label>
-			<input type="radio" name="answer" value="{{$index + 1}}" ng-model="formAnswer">
-			{{option}}
-		</label>
-	</li>
-</ul>
-<a href="{{question.nextUrl}}" ng-click="nextQuestion()">Next</a>
->>>>>>> 6b4f70df2ef5088225a74889a1033f0e1e7fc09d
