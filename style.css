@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
@@ -59,6 +60,9 @@ h2 {
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 130px;
+=======
+	color: black;
+>>>>>>> 6b4f70df2ef5088225a74889a1033f0e1e7fc09d
 }
 
 .light {
@@ -85,6 +89,7 @@ h2 {
     -webkit-transition: all 0.4s ease-in;
 }
 
+<<<<<<< HEAD
 .button {
 	font-size: 1.2em;
 	font-weight: 700;
@@ -168,3 +173,16 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+=======
+li {
+	list-style:none;
+	line-height: 25px;
+	padding: 5px;
+	color: #000;
+	background: #fff;
+}
+
+a {
+	background: #fff;
+}
+>>>>>>> 6b4f70df2ef5088225a74889a1033f0e1e7fc09d
