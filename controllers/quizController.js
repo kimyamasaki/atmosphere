@@ -5,27 +5,27 @@ var currentQuestion = 0;
 app.controller('quizController', function($scope, $route) {
   var questions = {
     q1: {
-      question: "What is your opinion on people.",
-		  options: ["I can always find the good, even in the most unlikeable people!", "I keep my problems to myself.", "Sheesh, I hate people."],
+      question: "Generally, what is your opinion on people?",
+		  options: ["I can always find the good in everyone!", "I keep my problems to myself.", "Sheesh, I hate people."],
       nextUrl: '#quiz/q2',
     },
     q2: {
-      question: "You just finished a long day on at work and have arrived home. How do you feel?",
+      question: "You just finished a long day at work and have arrived home. How do you feel?",
 		  options: ["That was pretty productive!", "I need to get some sleep.", "Every day is the same damn thing."],
       nextUrl: '#quiz/q3',
     },
     q3: {
-      question: "You just talked with your friend and the conversation got a little heated. The situation is tense right now. What do you do?",
-		  options: ["Try to put youself in your friend's shoes. Figure out what's bothering them.", "Tell your friend to snap out of it.", "Tell them to quit being a jerk!"],
+      question: "A conversation with your friend got a little heated. The situation is tense. What do you do?",
+		  options: ["Figure out what's bothering them.", "Tell your friend to snap out of it.", "Tell them to quit being a jerk!"],
       nextUrl: '#quiz/q4',
     },
     q4: {
-    	question: "You just complete a test and you didn't do too hot on it. How are you feeling?",
+    	question: "You just completed a test but you didn't do too well on it. How are you feeling?",
 		  options: ["I'll definitely get it next time!", "Eh, I guess I'll have to study more.", "That test was pretty stupid..."],
       nextUrl: '#quiz/q5',
     },
     q5: {
-    	question: "What do you most want to do right now?",
+    	question: "If you could do anything right now, what would you do?",
 		  options: ["I want to go on adventure!", "A nap sounds pretty solid at the moment.", "I want to be alone. I don't want to deal with anyone."],
       nextUrl: '#quiz/results',
     }
@@ -143,31 +143,36 @@ app.controller('quizController', function($scope, $route) {
 
   $scope.changeClass = function(copyCurrentSum) {
 
-    if (copyCurrentSum <= .47) {
+     if (copyCurrentSum <= .47) {
       document.body.classList.add('light');
-      // cloudy.style.visibility = "hidden";
-      // rainy.style.visibility = "hidden";
-      document.body.classList.add('sun');
+      document.body.classList.remove('medium');
+      document.body.classList.remove('dark');
 
+      document.body.classList.add('sun');
       document.body.classList.remove('rain')
       document.body.classList.remove('cloud')
       console.log("Happy");
 
     } else if (copyCurrentSum >= .80) {
       document.body.classList.add('dark');
-      document.body.classList.add('rain');
+      document.body.classList.remove('medium');
+      document.body.classList.remove('light');
 
+      document.body.classList.add('rain');
       document.body.classList.remove('sun')
       document.body.classList.remove('cloud')
       console.log("Sad");
 
     } else {
       document.body.classList.add('medium');
-      document.body.classList.add('cloud');
+      document.body.classList.remove('light');
+      document.body.classList.remove('dark');
 
+      document.body.classList.add('cloud');
       document.body.classList.remove('rain')
       document.body.classList.remove('sun')
       console.log("Neutral");
     }
   };
+
 });
