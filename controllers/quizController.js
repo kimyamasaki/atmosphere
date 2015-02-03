@@ -31,15 +31,40 @@ app.controller('quizController', function($scope, $route) {
     }
   };
 
+  var results = ["You are fine and dandy today!", "You seem alright.", "You seem to be a little under the weather."];
+
+  //console.log(results);
+
 
   var question = $route.current.params.question;
   $scope.question = questions[question];
 
+  $scope.resultMessage = function(copyCurrentSum){
+    copyCurrentSum = copyCurrentSum/15
+    //console.log('The final average is' + copyCurrentSum);
+
+    if (copyCurrentSum <= .47) {
+
+      results = results[0];
+      document.getElementById("moodResults").innerHTML = results;
+      console.log(results);
+    } else if (copyCurrentSum >= .80) {
+      results = results[2];
+      document.getElementById("moodResults").innerHTML = results;
+      console.log(results);
+    } else {
+      results = results[1];
+      document.getElementById("moodResults").innerHTML = results;
+      console.log(results);
+    }
+  }
 
   $scope.isQuizOver = function(){
     if (currentQuestion == 5){
       $scope.quizOver = true;
       console.log("Quiz over is: " + $scope.quizOver);
+      $scope.resultMessage(currentSum);
+
     }
   }
 
@@ -86,7 +111,7 @@ app.controller('quizController', function($scope, $route) {
 
       console.log("Total sum: "+ copyCurrentSum +" out of 9");
       copyCurrentSum = copyCurrentSum/9
-      console.log("divided by 12 is "+ copyCurrentSum);
+      console.log("divided by 9 is "+ copyCurrentSum);
     };
 
     if(currentQuestion == 4){
@@ -100,7 +125,7 @@ app.controller('quizController', function($scope, $route) {
 
       console.log("Total sum: "+ copyCurrentSum +" out of 15");
       copyCurrentSum = copyCurrentSum/15
-      console.log("divided by 12 is "+ copyCurrentSum);
+      console.log("divided by 15 is "+ copyCurrentSum);
     };
 
     if(currentQuestion == 6){
