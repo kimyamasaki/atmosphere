@@ -147,12 +147,7 @@ app.controller('quizController', function($scope, $route) {
       document.body.classList.add('light');
       document.body.classList.remove('medium');
       document.body.classList.remove('dark');
-<<<<<<< HEAD
 
-=======
-      // cloudy.style.visibility = "hidden";
-      // rainy.style.visibility = "hidden";
->>>>>>> 572866134188d282319cb3b7c426a5ff2e413d07
       document.body.classList.add('sun');
       document.body.classList.remove('rain')
       document.body.classList.remove('cloud')
