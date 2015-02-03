@@ -145,26 +145,31 @@ app.controller('quizController', function($scope, $route) {
 
     if (copyCurrentSum <= .47) {
       document.body.classList.add('light');
+      document.body.classList.remove('medium');
+      document.body.classList.remove('dark');
       // cloudy.style.visibility = "hidden";
       // rainy.style.visibility = "hidden";
       document.body.classList.add('sun');
-
       document.body.classList.remove('rain')
       document.body.classList.remove('cloud')
       console.log("Happy");
 
     } else if (copyCurrentSum >= .80) {
       document.body.classList.add('dark');
-      document.body.classList.add('rain');
+      document.body.classList.remove('medium');
+      document.body.classList.remove('light');
 
+      document.body.classList.add('rain');
       document.body.classList.remove('sun')
       document.body.classList.remove('cloud')
       console.log("Sad");
 
     } else {
       document.body.classList.add('medium');
-      document.body.classList.add('cloud');
+      document.body.classList.remove('light');
+      document.body.classList.remove('dark');
 
+      document.body.classList.add('cloud');
       document.body.classList.remove('rain')
       document.body.classList.remove('sun')
       console.log("Neutral");
