@@ -7,7 +7,7 @@ body {
 .sun {
 	max-height: 70px;
 	width: 100%;
-	background-image: url('../images/sun.png');
+	background-image: url('../atmosphere/images/sun.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -20,7 +20,7 @@ body {
 
 .cloud {
 	max-height: 50px;
-	background-image: url('../images/cloud.png');
+	background-image: url('../atmosphere/images/cloud.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -33,7 +33,7 @@ body {
 
 .rain {
 	max-height: 50px;
-	background-image: url('../images/rain.png');
+	background-image: url('../atmosphere/images/rain.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
