@@ -136,10 +136,10 @@ app.controller('quizController', function($scope, $route) {
   };
 
   // Background transitions
-  var weather = document.getElementById("weather");
-  var sunny = document.getElementById('sun');
-  var cloudy = document.getElementById('cloud');
-  var rainy = document.getElementById('rain');
+  $('#sun').show();
+  $('#cloud').hide();
+  $('#rain').hide();
+  document.body.classList.add('light');
 
   $scope.changeClass = function(copyCurrentSum) {
 
@@ -148,9 +148,10 @@ app.controller('quizController', function($scope, $route) {
       document.body.classList.remove('medium');
       document.body.classList.remove('dark');
 
-      document.body.classList.add('sun');
-      document.body.classList.remove('rain')
-      document.body.classList.remove('cloud')
+      $('#sun').show();
+      $('#cloud').hide();
+      $('#rain').hide();
+
       console.log("Happy");
 
     } else if (copyCurrentSum >= .80) {
@@ -158,9 +159,10 @@ app.controller('quizController', function($scope, $route) {
       document.body.classList.remove('medium');
       document.body.classList.remove('light');
 
-      document.body.classList.add('rain');
-      document.body.classList.remove('sun')
-      document.body.classList.remove('cloud')
+      $('#sun').hide();
+      $('#cloud').hide();
+      $('#rain').show();
+
       console.log("Sad");
 
     } else {
@@ -168,9 +170,10 @@ app.controller('quizController', function($scope, $route) {
       document.body.classList.remove('light');
       document.body.classList.remove('dark');
 
-      document.body.classList.add('cloud');
-      document.body.classList.remove('rain')
-      document.body.classList.remove('sun')
+      $('#sun').hide();
+      $('#cloud').show();
+      $('#rain').hide();
+
       console.log("Neutral");
     }
   };
