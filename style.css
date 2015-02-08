@@ -5,7 +5,7 @@ body {
 }
 
 #sun {
-	height: 330px;
+	height: 310px;
 	width: 100%;
 	background-image: url('../atmosphere/images/sun.png');
 	background-size: contain;
@@ -22,7 +22,7 @@ body {
 }
 
 #cloud {
-	height: 280px;
+	height: 260px;
 	width: 100%;
 	background-image: url('../atmosphere/images/cloud.png');
 	background-size: cover;
@@ -39,7 +39,7 @@ body {
 }
 
 #rain {
-	height: 280px;
+	height: 260px;
 	width: 100%;
 	background-image: url('../atmosphere/images/rain.png');
 	background-size: cover;
@@ -71,7 +71,7 @@ h1 {
 h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
-	font-size: 3.5em;
+	font-size: 3.3em;
 	width: 85%;
 	margin: 0 auto;
 	margin-bottom: 80px;
@@ -190,7 +190,7 @@ input[type=radio]{
 }
 
 input[type=radio] + label{
-	font-size: 3.1em;
+	font-size: 2.9em;
 	background: #fff;
     opacity: 0.8;
     font-weight: 600;
@@ -198,7 +198,7 @@ input[type=radio] + label{
     color: #29527F;
     padding: 30px 40px 30px 40px;
     width: 100%;
-    min-height: 185px;
+    min-height: 180px;
     margin-bottom: 35px;
 
     -moz-border-radius:10px;
