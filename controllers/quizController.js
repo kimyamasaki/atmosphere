@@ -2,6 +2,7 @@
 var currentSum = 0;
 var currentQuestion = 0;
 
+
 app.controller('quizController', function($scope, $route) {
   var questions = {
     q1: {
@@ -33,8 +34,8 @@ app.controller('quizController', function($scope, $route) {
 
   var results = ["You are fine and dandy today!", "You seem alright.", "You seem to be a little under the weather."];
 
-  //console.log(results);
 
+  $scope.weather = app.weather;
 
   var question = $route.current.params.question;
   $scope.question = questions[question];
@@ -136,9 +137,6 @@ app.controller('quizController', function($scope, $route) {
   };
 
   // Background transitions
-  $('#sun').show();
-  $('#cloud').hide();
-  $('#rain').hide();
   document.body.classList.add('light');
 
   $scope.changeClass = function(copyCurrentSum) {
@@ -148,33 +146,27 @@ app.controller('quizController', function($scope, $route) {
       document.body.classList.remove('medium');
       document.body.classList.remove('dark');
 
-      $('#sun').show();
-      $('#cloud').hide();
-      $('#rain').hide();
-
       console.log("Happy");
+
+      app.weather = 1;
 
     } else if (copyCurrentSum >= .80) {
       document.body.classList.add('dark');
       document.body.classList.remove('medium');
       document.body.classList.remove('light');
 
-      $('#sun').hide();
-      $('#cloud').hide();
-      $('#rain').show();
-
       console.log("Sad");
+
+      app.weather = 3;
 
     } else {
       document.body.classList.add('medium');
       document.body.classList.remove('light');
       document.body.classList.remove('dark');
 
-      $('#sun').hide();
-      $('#cloud').show();
-      $('#rain').hide();
-
       console.log("Neutral");
+
+      app.weather = 2;
     }
   };
 

@@ -2,9 +2,9 @@
 	<div ng-show="!quizOver">
 
 		<div id="weather">
-			<div id="sun"></div>
-			<div id="cloud"></div>
-			<div id="rain"></div>
+			<div id="sun" ng-if="weather == 1" ng-animate="'fade'"></div>
+			<div id="cloud" ng-if="weather == 2" ng-animate="'fade'"></div>
+			<div id="rain" ng-if="weather == 3" ng-animate="'fade'"></div>
 		</div>
 
 		<div class="container">
@@ -18,15 +18,18 @@
 			<a href="{{question.nextUrl}}" ng-click="nextQuestion()" class="button">Next</a>
 		</div>
 
-
 	</div>
 	<!-- End of !quizOver -->
 	<div ng-show="quizOver">
+		<div id="sun" ng-if="weather == 1" ng-animate="'fade'"></div>
+		<div id="cloud" ng-if="weather == 2" ng-animate="'fade'"></div>
+		<div id="rain" ng-if="weather == 3" ng-animate="'fade'"></div>
+
 		<div class="container">
-			<h1 id ="moodResults">Mood message.</h1>
+			<h1 id="moodResults">Mood message.</h1>
 		</div>
 
-		<a href="javascript:document.location.reload(true);document.location='#/'" class="button">Take the quiz again</a>
+		<a href="javascript:document.location.reload(true);document.location='#/'" class="button">REPLAY</a>
 	</div>
 	<!-- End of quizArea -->
 </div>
