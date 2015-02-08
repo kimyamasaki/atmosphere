@@ -8,7 +8,7 @@ body {
 	height: 250px;
 	width: 100%;
 	background-image: url('../atmosphere/images/sun.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 
@@ -22,7 +22,7 @@ body {
 }
 
 #cloud {
-	height: 200px;
+	height: 250px;
 	width: 100%;
 	background-image: url('../atmosphere/images/cloud.png');
 	background-size: cover;
@@ -39,7 +39,7 @@ body {
 }
 
 #rain {
-	height: 200px;
+	height: 250px;
 	width: 100%;
 	background-image: url('../atmosphere/images/rain.png');
 	background-size: cover;
@@ -66,18 +66,18 @@ h1 {
 	font-weight: 700;
 	text-align: center;
 	margin-top: 60px;
-	margin-bottom: 210px;
+	margin-bottom: 230px;
 }
 
 h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
-	font-size: 45px;
+	font-size: 48px;
 	width: 85%;
 	margin: 0 auto;
 	margin-bottom: 80px;
 	margin-top: 320px;
-	line-height: 1.3em;
+	line-height: 1.33em;
 }
 
 #moodResults {
@@ -193,7 +193,7 @@ input[type=radio]{
 }
 
 input[type=radio] + label{
-	font-size: 38px;
+	font-size: 40px;
 	background: #fff;
     opacity: 0.8;
     font-weight: 600;
