@@ -7,7 +7,7 @@ body {
 #sun {
 	height: 330px;
 	width: 100%;
-	background-image: url('../images/sun.png');
+	background-image: url('../atmosphere/images/sun.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -24,7 +24,7 @@ body {
 #cloud {
 	height: 280px;
 	width: 100%;
-	background-image: url('../images/cloud.png');
+	background-image: url('../atmosphere/images/cloud.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -41,7 +41,7 @@ body {
 #rain {
 	height: 280px;
 	width: 100%;
-	background-image: url('../images/rain.png');
+	background-image: url('../atmosphere/images/rain.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -121,7 +121,7 @@ h2 {
 .header {
 	height: 200px;
 	width: 100%;
-	background-image: url('../images/header.png');
+	background-image: url('../atmosphere/images/header.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
