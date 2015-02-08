@@ -15,10 +15,12 @@ body {
 	position: absolute;
 	top: 0;
 
-	transition: all 0.1s;
-    -ms-transition: all 0.1s;
-    -moz-transition: all 0.1s;
-    -webkit-transition: all 0.1s;
+	transition: all 1s;
+    -ms-transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+
+
 }
 
 #cloud {
@@ -174,7 +176,8 @@ h2 {
     bottom: 10%;*/
 }
 
-.button.next {
+.button.next2 {
+	text-align: center;
 
 }
 
@@ -247,9 +250,9 @@ a:hover {
 
 
 
-.fade-enter, 
+.fade-enter,
 .fade-leave
-{ 
+{
   -webkit-transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   -moz-transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   -ms-transition: 1s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -259,14 +262,14 @@ a:hover {
     animation-delay: 2s;
   position: relative;
   display: block;
-} 
- 
-.fade-enter.fade-enter-active, 
+}
+
+.fade-enter.fade-enter-active,
 .fade-leave {
   opacity: 1;
   top: 0;
 }
- 
+
 .fade-leave.fade-leave-active,
 .fade-enter {
   opacity: 0;
